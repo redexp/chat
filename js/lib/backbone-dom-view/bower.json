@@ -1,0 +1,29 @@
+{
+  "name": "backbone-dom-view",
+  "main": "backbone-dom-view.js",
+  "version": "1.47.0",
+  "homepage": "https://github.com/redexp/backbone-dom-view",
+  "authors": [
+    "Sergii Kliuchnyk <sergiikliuchnyk@gmail.com>"
+  ],
+  "description": "Better View class for Backbone",
+  "keywords": [
+    "backbone",
+    "view",
+    "dom"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "examples",
+    "libs",
+    "test"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "",
+    "chai": "",
+    "chai-jquery": "",
+    "requirejs": "~2.1.15"
+  }
+}

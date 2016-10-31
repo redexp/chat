@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "gulp": "3.*",
+    "gulp-uglify": "1.*",
+    "gulp-rename": "1.*"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redexp/define-module-name.git"
+  },
+  "keywords": [
+    "define",
+    "require",
+    "named"
+  ],
+  "author": "Sergii Kliuchnyk",
+  "license": "MIT"
+}

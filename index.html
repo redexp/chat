@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href="style/css/chat.css"/>
+</head>
+<body>
+
+<div class="body">
+  <div class="pages">
+    <div id="chat" class="chat">
+      <div class="messages-scroller" data-messages-scroller>
+        <div class="messages" data-messages>
+          <div>
+            <div class="text" data-message-text></div>
+          </div>
+        </div>
+      </div>
+      <div class="textarea">
+        <textarea data-chat-text></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/lib/define-module-name/define-module-name.min.js"></script>
+<script>define('jquery');</script>
+<script src="js/lib/jquery/dist/jquery.min.js"></script>
+<script>define('underscore');</script>
+<script src="js/lib/underscore/underscore-min.js"></script>
+<script>define('backbone');</script>
+<script src="js/lib/backbone/backbone-min.js"></script>
+<script>define('view');</script>
+<script src="js/lib/backbone-dom-view/backbone-dom-view.js"></script>
+<script src="js/lib/dispatcher/dispatcher.js"></script>
+<script src="js/model/chat.js"></script>
+<script src="js/view/chat.js"></script>
+<script src="js/view/chat-message.js"></script>
+<script src="js/controller/chat.js"></script>
+<script src="js/app.js"></script>
+<script>define.end();</script>
+</body>
+</html>

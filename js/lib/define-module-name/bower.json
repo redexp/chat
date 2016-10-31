@@ -1,0 +1,25 @@
+{
+  "name": "define-module-name",
+  "version": "1.9.1",
+  "homepage": "https://github.com/redexp/define-module-name",
+  "authors": [
+    "Sergii Kliuchnyk <redexp@ukr.net>"
+  ],
+  "description": "Simple module definition lib",
+  "main": "define-module-name.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "require",
+    "define"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
