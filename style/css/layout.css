@@ -1,0 +1,26 @@
+.body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+}
+.pages {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.pages > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #fff;
+}
+.pages > .active-page {
+  display: block;
+}

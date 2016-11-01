@@ -16,6 +16,7 @@ define('controller/chat', [
 
     dispatcher.on('page:chat', function () {
         chat.view.ui.textarea.focus();
+        chat.view.updateMessagesMaxHeight();
     });
 
     dispatcher.on('add-chat-message', function (chat, text) {
