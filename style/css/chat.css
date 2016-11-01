@@ -1,23 +1,9 @@
-.body {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  z-index: 1;
-}
-.pages {
+.chat {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-}
-.pages > * {
-  height: 100%;
-}
-.chat {
   display: flex;
   flex-direction: column;
 }

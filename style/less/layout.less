@@ -1,0 +1,23 @@
+@import "utils.less";
+
+.body {
+    .position-fill(fixed);
+    height: 100%;
+    z-index: 1;
+}
+
+.pages {
+    .position-fill(absolute);
+
+    > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: #fff;
+    }
+
+    > .active-page {
+        display: block;
+    }
+}

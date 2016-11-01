@@ -14,6 +14,10 @@ define('controller/chat', [
         model: chat
     });
 
+    dispatcher.on('page:chat', function () {
+        chat.view.ui.textarea.focus();
+    });
+
     dispatcher.on('add-chat-message', function (chat, text) {
         chat.get('messages').add({
             text: text
