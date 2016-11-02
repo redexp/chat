@@ -1,9 +1,11 @@
 define('view/chat-list', [
     'view/chat',
-    'view'
+    'view',
+    'jquery'
 ], function (
     ChatView,
-    View
+    View,
+    $
 ) {
 
     function ChatListView() {
@@ -12,6 +14,13 @@ define('view/chat-list', [
 
     View.extend({
         constructor: ChatListView,
+
+        initialize: function () {
+            var view = this;
+            $(window).resize(function () {
+                view.list.invoke('updateMessagesMaxHeight');
+            });
+        },
 
         template: {
             '[data-chat-list]': {
