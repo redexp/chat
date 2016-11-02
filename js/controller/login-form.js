@@ -6,7 +6,9 @@ define('controller/login-form', [
     $
 ) {
 
-    $('#login-form [name="username"]').focus();
+    $(function () {
+        $('#login-form [name="username"]').focus();
+    });
 
     $('#login-form form').submit(function (e) {
         e.preventDefault();

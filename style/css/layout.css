@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 .body {
   position: fixed;
   left: 0;

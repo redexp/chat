@@ -18,18 +18,22 @@
     </div>
 
     <div id="chat">
-      <div class="chat">
-        <div class="messages-scroller" data-messages-scroller>
-          <div class="messages" data-messages>
-            <div>
-              <div class="text" data-message-text></div>
+      <div class="chat-list" data-chat-list>
+        <div class="chat">
+          <div class="messages-scroller" data-messages-scroller>
+            <div class="messages" data-messages>
+              <div>
+                <div class="text" data-message-text></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="textarea">
-          <textarea data-chat-text></textarea>
+          <div class="textarea">
+            <textarea data-chat-text></textarea>
+          </div>
         </div>
       </div>
+
+      <div id="divider" class="chat-divider hidden"></div>
     </div>
   </div>
 </div>
@@ -47,7 +51,9 @@
 <script src="js/lib/backbone-dom-view/backbone-dom-view.min.js"></script>
 <script src="js/lib/dispatcher/dispatcher.js"></script>
 <script src="js/lib/pages/pages.js"></script>
+<script src="js/model/chat-list.js"></script>
 <script src="js/model/chat.js"></script>
+<script src="js/view/chat-list.js"></script>
 <script src="js/view/chat.js"></script>
 <script src="js/view/chat-message.js"></script>
 <script src="js/controller/login-form.js"></script>

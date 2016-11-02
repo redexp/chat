@@ -22,7 +22,7 @@ define('view/chat', [
         },
 
         initialize: function () {
-            this.updateMessagesMaxHeight();
+            this.once('added', this.updateMessagesMaxHeight);
         },
 
         scrollToBottom: function () {
