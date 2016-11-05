@@ -1,4 +1,4 @@
-define('pages', ['dispatcher', 'jquery', 'velocity'], function (dispatcher, $) {
+define('pager', ['dispatcher', 'jquery', 'velocity'], function (dispatcher, $) {
 
     var effects = {
         next: [
@@ -18,6 +18,11 @@ define('pages', ['dispatcher', 'jquery', 'velocity'], function (dispatcher, $) {
             pIndex = page.index(),
             aIndex = active.index(),
             direction = pIndex > aIndex ? 'next' : 'prev';
+
+        if (active.length === 0) {
+            setActivePage();
+            return;
+        }
 
         if (pIndex === aIndex) return;
 

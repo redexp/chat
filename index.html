@@ -9,12 +9,21 @@
 
 <div class="body">
   <div class="pages">
-    <div id="login-form" class="active-page">
+    <div id="login-form">
       <form class="login-form">
         <div>
           <input type="text" placeholder="Your name" name="username"/>
         </div>
       </form>
+    </div>
+
+    <div id="rooms">
+      <div class="rooms" data-rooms-list>
+        <div class="room">
+          <div class="room-toolbar"><a href="#" class="room-title" data-title></a></div>
+          <div class="rooms" data-sub-rooms-list></div>
+        </div>
+      </div>
     </div>
 
     <div id="chat">
@@ -46,18 +55,23 @@
 <script>define('underscore');</script>
 <script src="js/lib/underscore/underscore-min.js"></script>
 <script>define('backbone');</script>
-<script src="js/lib/backbone/backbone-min.js"></script>
+<script src="js/lib/backbone/backbone.js"></script>
 <script>define('view');</script>
-<script src="js/lib/backbone-dom-view/backbone-dom-view.min.js"></script>
+<script src="js/lib/backbone-dom-view/backbone-dom-view.js"></script>
 <script src="js/lib/dispatcher/dispatcher.js"></script>
-<script src="js/lib/pages/pages.js"></script>
+<script src="js/lib/router/router.js"></script>
+<script src="js/lib/pager/pager.js"></script>
+<script src="js/model/rooms-list.js"></script>
 <script src="js/model/chat-list.js"></script>
 <script src="js/model/chat.js"></script>
+<script src="js/view/rooms-list.js"></script>
 <script src="js/view/chat-list.js"></script>
 <script src="js/view/chat.js"></script>
 <script src="js/view/chat-message.js"></script>
 <script src="js/controller/login-form.js"></script>
+<script src="js/controller/rooms.js"></script>
 <script src="js/controller/chat.js"></script>
+<script src="js/store.js"></script>
 <script src="js/app.js"></script>
 <script>define.end();</script>
 </body>

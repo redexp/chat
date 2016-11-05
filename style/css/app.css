@@ -37,6 +37,12 @@
   align-items: center;
   justify-content: center;
 }
+.rooms > .room {
+  padding: 10px;
+}
+.rooms > .room > .rooms {
+  margin-left: 10px;
+}
 .chat-list {
   position: absolute;
   left: 0;

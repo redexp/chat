@@ -1,23 +1,28 @@
 define('controller/chat', [
-    'model/chat-list',
+    'store',
     'view/chat-list',
     'dispatcher',
-    'jquery',
+    'router',
+    'pager',
     'velocity'
 ], function (
-    ChatList,
+    store,
     ChatListView,
     dispatcher,
-    $
+    router,
+    pager
 ) {
 
-    var chatList = new ChatList([{}]);
+    var chatList = store.Chat;
     chatList.view = new ChatListView({
         el: '#chat',
         model: chatList
     });
 
-    dispatcher.on('page:chat', function () {
+    chatList.add({});
+
+    router.add('room', 'rooms/:id', function (id) {
+        pager('chat');
         chatList.view.list.get(chatList.first()).ui.textarea.focus();
     });
 

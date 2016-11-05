@@ -1,8 +1,8 @@
 define('controller/login-form', [
-    'pages',
+    'dispatcher',
     'jquery'
 ], function (
-    pages,
+    dispatcher,
     $
 ) {
 
@@ -13,6 +13,6 @@ define('controller/login-form', [
     $('#login-form form').submit(function (e) {
         e.preventDefault();
 
-        pages('chat');
+        dispatcher.trigger('login');
     });
 });
