@@ -1,7 +1,7 @@
 {
   "name": "backbone-dom-view",
   "main": "backbone-dom-view.js",
-  "version": "1.47.0",
+  "version": "1.48.1",
   "homepage": "https://github.com/redexp/backbone-dom-view",
   "authors": [
     "Sergii Kliuchnyk <sergiikliuchnyk@gmail.com>"
@@ -26,14 +26,14 @@
     "chai-jquery": "",
     "requirejs": "~2.1.15"
   },
-  "_release": "1.47.0",
+  "_release": "1.48.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.47.0",
-    "commit": "b514d5b524c483dd4eaac677af1da369cba4a414"
+    "tag": "v1.48.1",
+    "commit": "1c586d5d5d5f401df08d5d1f2640528ed1e04819"
   },
   "_source": "https://github.com/redexp/backbone-dom-view.git",
-  "_target": "~1.47.0",
+  "_target": "~1.48.1",
   "_originalSource": "backbone-dom-view",
   "_direct": true
 }
