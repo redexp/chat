@@ -1,12 +1,17 @@
 define('controller/login-form', [
     'dispatcher',
+    'router',
+    'pager',
     'jquery'
 ], function (
     dispatcher,
+    router,
+    pager,
     $
 ) {
 
-    $(function () {
+    router.add('login', '', function () {
+        pager('login-form');
         $('#login-form [name="username"]').focus();
     });
 
