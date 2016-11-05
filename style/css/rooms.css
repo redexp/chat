@@ -1,0 +1,9 @@
+.hidden {
+  display: none;
+}
+.rooms > .room {
+  padding: 10px;
+}
+.rooms > .room > .rooms {
+  margin-left: 10px;
+}
