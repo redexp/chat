@@ -26,7 +26,7 @@ define('view/rooms/rooms-list', [
                     'click': {
                         'a[data-title]': function (e) {
                             e.preventDefault();
-                            router.go(e.currentTarget.getAttribute('href'));
+                            router.go(e.currentTarget.getAttribute('href').slice(1)); // slice #
                         }
                     }
                 }
@@ -56,7 +56,7 @@ define('view/rooms/rooms-list', [
                 text: '@title',
                 attr: {
                     'href': function () {
-                        return 'rooms/' + this.model.get('id');
+                        return '#rooms/' + this.model.get('id');
                     }
                 }
             },
