@@ -1,7 +1,9 @@
 define('model/rooms-list', [
-    'backbone'
+    'backbone',
+    'underscore'
 ], function (
-    BB
+    BB,
+    _
 ) {
 
     function RoomsList() {
@@ -11,6 +13,25 @@ define('model/rooms-list', [
     BB.Collection.extend({
         constructor: RoomsList,
         model: Room,
+
+        spread: function (rooms) {
+            if (!_.isArray(rooms)) {
+                rooms = [rooms];
+            }
+
+            var list = this;
+
+            return rooms.map(function (room) {
+                if (room.parent_id) {
+                    room = list.get(room.parent_id).get('rooms').add(room);
+                }
+                else {
+                    room = list.add(room);
+                }
+
+                return list._byId[room.get('id')] = room;
+            });
+        },
 
         hideRoomsByPath: function (path) {
             if (typeof path === 'string') {
@@ -31,6 +52,15 @@ define('model/rooms-list', [
 
         showAll: function () {
             this.invoke('showDeep');
+        },
+
+        findById: function (id) {
+            var room = this.get(id);
+            if (room) return room;
+            for (var i = 0, len = this.length; i < len; i++) {
+                room = room.at(i).get('rooms').findById(id);
+                if (room) return room;
+            }
         }
     });
 
@@ -52,6 +82,10 @@ define('model/rooms-list', [
         showDeep: function () {
             this.set('hidden', false);
             this.get('rooms').showAll();
+        },
+
+        getPathUrl: function () {
+            return 'rooms/' + this.get('id');
         }
     });
 

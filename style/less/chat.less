@@ -1,8 +1,21 @@
 @import "utils";
 
-.chat-list {
+.chat-layout {
     .position-fill(absolute);
 
+    display: flex;
+    flex-direction: column;
+
+    .chat-title {
+        flex: 0 0 auto;
+    }
+
+    .chat-list {
+        flex: 1 1 auto;
+    }
+}
+
+.chat-list {
     display: flex;
 
     > * {

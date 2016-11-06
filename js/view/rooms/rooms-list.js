@@ -56,7 +56,7 @@ define('view/rooms/rooms-list', [
                 text: '@title',
                 attr: {
                     'href': function () {
-                        return '#rooms/' + this.model.get('id');
+                        return '#' + this.model.getPathUrl();
                     }
                 }
             },

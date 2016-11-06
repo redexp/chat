@@ -23,7 +23,16 @@ define('controller/chat', [
 
     router.add('room', 'rooms/:id', function (id) {
         pager('chat');
-        chatList.view.list.get(chatList.first()).ui.textarea.focus();
+
+        var room = store.Rooms.get(id);
+        chatList.view.get('room_path').reset((function () {
+            var list = [room];
+            while (room.get('parent_id')) {
+                room = store.Rooms.get(room.get('parent_id'));
+                list.push(room);
+            }
+            return list.reverse();
+        })());
     });
 
     dispatcher.on('add-chat-message', function (chat, text) {

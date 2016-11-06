@@ -42,22 +42,32 @@
     </div>
 
     <div id="chat">
-      <div class="chat-list" data-chat-list>
-        <div class="chat">
-          <div class="messages-scroller" data-messages-scroller>
-            <div class="messages" data-messages>
-              <div>
-                <div class="text" data-message-text></div>
+      <div class="chat-layout">
+        <div class="chat-title" data-room-path>
+          <span>
+            <a class="room-title" href="#rooms">Rooms</a>
+          </span>
+          <span>
+            <span class="room-divider">/</span>
+            <a class="room-title" href="#" data-room-title></a>
+          </span>
+        </div>
+
+        <div class="chat-list" data-chat-list>
+          <div class="chat">
+            <div class="messages-scroller" data-messages-scroller>
+              <div class="messages" data-messages>
+                <div>
+                  <div class="text" data-message-text></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="textarea">
-            <textarea data-chat-text></textarea>
+            <div class="textarea">
+              <textarea data-chat-text></textarea>
+            </div>
           </div>
         </div>
       </div>
-
-      <div id="divider" class="chat-divider hidden"></div>
     </div>
   </div>
 </div>

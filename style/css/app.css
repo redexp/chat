@@ -60,12 +60,22 @@
 .users-rooms > .user-room {
   padding: 10px;
 }
-.chat-list {
+.chat-layout {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.chat-layout .chat-title {
+  flex: 0 0 auto;
+}
+.chat-layout .chat-list {
+  flex: 1 1 auto;
+}
+.chat-list {
   display: flex;
 }
 .chat-list > * {
