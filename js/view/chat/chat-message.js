@@ -1,4 +1,4 @@
-define('view/chat-message', [
+define('view/chat/chat-message', [
     'view'
 ], function (
     View

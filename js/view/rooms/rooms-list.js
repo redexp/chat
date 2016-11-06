@@ -1,4 +1,4 @@
-define('view/rooms-list', [
+define('view/rooms/rooms-list', [
     'view',
     'router'
 ], function (
@@ -46,6 +46,12 @@ define('view/rooms-list', [
         },
 
         template: {
+            'root': {
+                'class': {
+                    'hidden': '@hidden'
+                }
+            },
+
             '[data-title]': {
                 text: '@title',
                 attr: {

@@ -1,6 +1,6 @@
 define('controller/chat', [
     'store',
-    'view/chat-list',
+    'view/chat/chat-list',
     'dispatcher',
     'router',
     'pager',

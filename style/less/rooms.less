@@ -1,17 +1,30 @@
 @import "utils";
 
+.rooms-toolbar {
+    padding: 10px;
+
+    .search-hint {
+        color: #ccc;
+        font-size: 12px;
+    }
+}
+
+.rooms-scroller {
+    overflow: auto;
+}
+
 .rooms {
     > .room {
         padding: 10px;
 
-        > .room-toolbar {
-            .room-title {
-                
-            }
-        }
-
         > .rooms {
             margin-left: 10px;
         }
+    }
+}
+
+.users-rooms {
+    > .user-room {
+        padding: 10px;
     }
 }

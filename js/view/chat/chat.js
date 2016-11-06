@@ -1,6 +1,6 @@
-define('view/chat', [
+define('view/chat/chat', [
     'view',
-    'view/chat-message',
+    'view/chat/chat-message',
     'dispatcher'
 ], function (
     View,

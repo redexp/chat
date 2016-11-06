@@ -18,10 +18,25 @@
     </div>
 
     <div id="rooms">
-      <div class="rooms" data-rooms-list>
-        <div class="room">
-          <div class="room-toolbar"><a href="#" class="room-title" data-title></a></div>
-          <div class="rooms" data-sub-rooms-list></div>
+      <div class="rooms-toolbar" data-rooms-toolbar>
+        <input type="text" data-search placeholder="Project title or User name"/>
+        <div class="search-hint">For example: <span data-search-hint></span></div>
+      </div>
+
+      <div class="rooms-scroller">
+        <div class="rooms" data-rooms-list>
+          <div class="room">
+            <div class="room-toolbar"><a href="#" class="room-title" data-title></a></div>
+            <div class="rooms" data-sub-rooms-list></div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="users-rooms" data-users-rooms-list>
+          <div class="user-room">
+            <div class="user-room-toolbar"><a href="#" class="user-room-title" data-title></a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,12 +77,15 @@
 <script src="js/lib/router/router.js"></script>
 <script src="js/lib/pager/pager.js"></script>
 <script src="js/model/rooms-list.js"></script>
+<script src="js/model/users-list.js"></script>
 <script src="js/model/chat-list.js"></script>
 <script src="js/model/chat.js"></script>
-<script src="js/view/rooms-list.js"></script>
-<script src="js/view/chat-list.js"></script>
-<script src="js/view/chat.js"></script>
-<script src="js/view/chat-message.js"></script>
+<script src="js/view/rooms/rooms-toolbar.js"></script>
+<script src="js/view/rooms/rooms-list.js"></script>
+<script src="js/view/rooms/users-rooms-list.js"></script>
+<script src="js/view/chat/chat-list.js"></script>
+<script src="js/view/chat/chat.js"></script>
+<script src="js/view/chat/chat-message.js"></script>
 <script src="js/controller/login-form.js"></script>
 <script src="js/controller/rooms.js"></script>
 <script src="js/controller/chat.js"></script>

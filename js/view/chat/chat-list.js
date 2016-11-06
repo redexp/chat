@@ -1,5 +1,5 @@
-define('view/chat-list', [
-    'view/chat',
+define('view/chat/chat-list', [
+    'view/chat/chat',
     'view',
     'jquery'
 ], function (
