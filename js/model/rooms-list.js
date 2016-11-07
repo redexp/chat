@@ -54,13 +54,14 @@ define('model/rooms-list', [
             this.invoke('showDeep');
         },
 
-        findById: function (id) {
-            var room = this.get(id);
-            if (room) return room;
-            for (var i = 0, len = this.length; i < len; i++) {
-                room = room.at(i).get('rooms').findById(id);
-                if (room) return room;
+        getRoomPath: function (room) {
+            room = this.get(room);
+            var list = [room];
+            while (room.get('parent_id')) {
+                room = this.get(room.get('parent_id'));
+                list.push(room);
             }
+            return list.reverse();
         }
     });
 

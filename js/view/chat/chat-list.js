@@ -26,8 +26,16 @@ define('view/chat/chat-list', [
         initialize: function () {
             var view = this;
             $(window).resize(function () {
-                view.list.invoke('updateMessagesMaxHeight');
+                view.updateMessagesMaxHeight();
             });
+        },
+
+        updateMessagesMaxHeight: function () {
+            this.list.invoke('updateMessagesMaxHeight');
+        },
+
+        focus: function () {
+            this.list.get(this.model.first()).ui.textarea.focus();
         },
 
         template: {

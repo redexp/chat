@@ -20,6 +20,7 @@ define('pager', ['dispatcher', 'jquery', 'velocity'], function (dispatcher, $) {
             direction = pIndex > aIndex ? 'next' : 'prev';
 
         if (active.length === 0) {
+            triggerActivePage();
             setActivePage();
             return;
         }
@@ -30,15 +31,23 @@ define('pager', ['dispatcher', 'jquery', 'velocity'], function (dispatcher, $) {
         active.css('display', 'block');
 
         page.velocity(effects[direction][0], {duration: 300, display: 'block', begin: removeActivePage});
-        active.velocity(effects[direction][1], {duration: 300, display: 'none', complete: setActivePage});
+        active.velocity(effects[direction][1], {duration: 300, display: 'none', begin: triggerActivePage, complete: setActivePage});
 
         function removeActivePage() {
             active.removeClass('active-page');
         }
 
+        function triggerActivePage() {
+            var timer = setInterval(function () {
+                if (page.css('display') === 'block') {
+                    clearInterval(timer);
+                    dispatcher.trigger('page:' + page.attr('id'));
+                }
+            }, 20);
+        }
+
         function setActivePage() {
             page.addClass('active-page').css('transform', '');
-            dispatcher.trigger('page:' + page.attr('id'));
         }
 
         return page;
