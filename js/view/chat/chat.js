@@ -21,16 +21,8 @@ define('view/chat/chat', [
             textarea: '[data-chat-text]'
         },
 
-        initialize: function () {
-            this.once('added', this.updateMessagesMaxHeight);
-        },
-
         scrollToBottom: function () {
             this.ui.messages_scroller.get(0).scrollTop = this.ui.messages_scroller.get(0).scrollHeight;
-        },
-
-        updateMessagesMaxHeight: function () {
-            this.ui.messages.css('max-height', this.ui.messages_scroller.height());
         },
 
         addMessage: function () {

@@ -37,21 +37,31 @@
 
     box-sizing: border-box;
 
-    :last-child {
+    &:last-child {
         border-width: 0;
     }
 
-    .messages-scroller {
-        flex: 1 0px;
-        position: relative;
-        overflow-y: auto;
-    }
-
     .messages {
-        position: absolute;
-        bottom: 0;
-        padding: 4px;
-        box-sizing: border-box;
+        position: relative;
+        flex: 1 1 auto;
+
+        overflow-y: auto;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            min-height: 100%;
+
+            > div:first-child {
+                flex: 1 1 auto;
+            }
+
+            > div:last-child {
+                flex: 0 1 auto;
+            }
+        }
     }
 
     .textarea {
@@ -66,17 +76,4 @@
             padding: 3px;
         }
     }
-}
-
-.chat-divider {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0;
-    border: solid #ccc;
-    border-width: 0 0 0 1px;
-    background-color: #fff;
 }

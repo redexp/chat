@@ -26,8 +26,13 @@ define('controller/chat', [
         chatList.view.get('room_path').reset(store.Rooms.getRoomPath(id));
     });
 
+    router.add('user-room', 'user-room/:id', function (id) {
+        pager('chat');
+        var user = store.Users.get(id);
+        chatList.view.get('room_path').reset(user);
+    });
+
     dispatcher.on('page:chat', function () {
-        chatList.view.updateMessagesMaxHeight();
         chatList.view.focus();
     });
 

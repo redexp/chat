@@ -37,19 +37,26 @@
   border-width: 0 1px 0 0;
   box-sizing: border-box;
 }
-.chat :last-child {
+.chat:last-child {
   border-width: 0;
 }
-.chat .messages-scroller {
-  flex: 1 0px;
+.chat .messages {
   position: relative;
+  flex: 1 1 auto;
   overflow-y: auto;
 }
-.chat .messages {
+.chat .messages > div {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  bottom: 0;
-  padding: 4px;
-  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+}
+.chat .messages > div > div:first-child {
+  flex: 1 1 auto;
+}
+.chat .messages > div > div:last-child {
+  flex: 0 1 auto;
 }
 .chat .textarea {
   height: 100px;
@@ -61,16 +68,4 @@
   border: 0;
   box-sizing: border-box;
   padding: 3px;
-}
-.chat-divider {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  border: solid #ccc;
-  border-width: 0 0 0 1px;
-  background-color: #fff;
 }

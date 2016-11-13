@@ -23,17 +23,6 @@ define('view/chat/chat-list', [
             };
         },
 
-        initialize: function () {
-            var view = this;
-            $(window).resize(function () {
-                view.updateMessagesMaxHeight();
-            });
-        },
-
-        updateMessagesMaxHeight: function () {
-            this.list.invoke('updateMessagesMaxHeight');
-        },
-
         focus: function () {
             this.list.get(this.model.first()).ui.textarea.focus();
         },
@@ -43,7 +32,7 @@ define('view/chat/chat-list', [
                 each: {
                     field: 'room_path',
                     view: RoomPathView,
-                    el: '> *:nth-child(2)',
+                    el: '> *:nth-child(2)'
                 }
             },
 

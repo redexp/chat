@@ -36,7 +36,12 @@ define('view/rooms/users-rooms-list', [
             },
 
             '[data-title]': {
-                text: '@name'
+                text: '@name',
+                attr: {
+                    'href': function () {
+                        return '#user-room/' + this.model.get('id')
+                    }
+                }
             }
         }
     });
